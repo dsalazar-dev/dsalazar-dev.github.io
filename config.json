@@ -5,14 +5,14 @@
   "userimg": "https://avatars.githubusercontent.com/u/64514895?v=4",
   "sort": "created",
   "order": "asc",
-  "includeFork": false,
+  "includeFork": true,
   "theme": "dark.css",
   "types": [
    "owner"
   ],
   "twitter": null,
   "linkedin": "https://www.linkedin.com/in/salazarmdaniel/",
-  "medium": null,
+  "medium": "https://medium.com/@salazarm.daniel",
   "dribbble": null
  }
 ]
