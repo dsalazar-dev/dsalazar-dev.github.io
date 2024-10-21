@@ -554,13 +554,13 @@ body {
       rgba(10, 10, 10, 0.3),
       rgb(10, 10, 10, 1)
     ),
-    url("https://img.freepik.com/free-vector/matrix-style-binary-code-digital-falling-numbers-blue-background_1017-37387.jpg?w=1060&t=st=1729545530~exp=1729546130~hmac=f3ffc2420c9b72c6708fa73d82c5a9163466ab17e31f02e840f0b31dedeac342");
+    url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHUyMzQ0NTMxLWltYWdlLWt3dnk3bndtLmpwZw.jpg");
   --background-background: linear-gradient(
       0deg,
       rgba(10, 10, 10, 1),
       rgba(10, 10, 10, 0.6)
     ),
-    url("https://img.freepik.com/free-vector/matrix-style-binary-code-digital-falling-numbers-blue-background_1017-37387.jpg?w=1060&t=st=1729545530~exp=1729546130~hmac=f3ffc2420c9b72c6708fa73d82c5a9163466ab17e31f02e840f0b31dedeac342") center center fixed;
+    url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHUyMzQ0NTMxLWltYWdlLWt3dnk3bndtLmpwZw.jpg") center center fixed;
   --height: 50vh;
 }
 
@@ -591,6 +591,6 @@ body {
         rgba(10, 10, 10, 1),
         rgba(10, 10, 10, 0)
       ),
-      url("https://img.freepik.com/free-vector/matrix-style-binary-code-digital-falling-numbers-blue-background_1017-37387.jpg?w=1060&t=st=1729545530~exp=1729546130~hmac=f3ffc2420c9b72c6708fa73d82c5a9163466ab17e31f02e840f0b31dedeac342") !important;
+      url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHUyMzQ0NTMxLWltYWdlLWt3dnk3bndtLmpwZw.jpg") !important;
   }
 }
