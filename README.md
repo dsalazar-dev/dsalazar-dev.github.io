@@ -2,6 +2,18 @@
 
 Personal portfolio site for Daniel Salazar, AI Systems Engineer. Built as a static site deployable on GitHub Pages.
 
+## Adding Your Profile Photo
+
+The hero section expects your photo at `assets/profile.jpg`.
+
+1. Save your photo as `assets/profile.jpg` (JPEG recommended, ~600×800px, portrait orientation)
+2. The site will automatically display it in the hero card
+3. If the file is missing, a dark gradient placeholder renders instead — the layout stays intact
+
+For best results: crop tightly to head/shoulders, portrait (3:4) orientation.
+
+---
+
 ## Deployment (GitHub Pages)
 
 This site deploys automatically via GitHub Pages from the `master` branch.

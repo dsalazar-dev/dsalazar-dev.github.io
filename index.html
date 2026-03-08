@@ -38,16 +38,17 @@
         </a>
 
         <ul class="nav-links" role="list" id="nav-links">
-          <li><a href="#about"   class="nav-link">About</a></li>
-          <li><a href="#work"    class="nav-link">Work</a></li>
-          <li><a href="#systems" class="nav-link">Systems</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#about"      class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#work"       class="nav-link">Work</a></li>
+          <li><a href="#systems"    class="nav-link">Systems</a></li>
+          <li><a href="#contact"    class="nav-link">Contact</a></li>
         </ul>
 
         <div class="nav-actions">
-          <span class="open-badge" aria-label="Open to opportunities">
+          <span class="open-badge" aria-label="Available for selected projects">
             <span class="open-badge-dot" aria-hidden="true"></span>
-            Open to work
+            Available for projects
           </span>
           <a href="https://github.com/dsalazar-dev" class="nav-icon-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in new tab)">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -120,63 +121,37 @@
           </div>
         </div>
 
-        <!-- Right side: Agent architecture visualization -->
-        <div class="hero-visual" aria-hidden="true">
-          <div class="agent-diagram">
-            <div class="agent-diagram-label">Agent System — Active</div>
-
-            <div class="agent-node">
-              <span class="agent-node-dot dot-cyan"></span>
-              <div class="agent-node-text">
-                <div class="agent-node-title">User Query</div>
-                <div class="agent-node-sub">Input → Context Router</div>
-              </div>
+        <!-- Right side: Premium photo card -->
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-card">
+            <!-- Place your photo at assets/profile.jpg -->
+            <img
+              src="assets/profile.jpg"
+              alt="Daniel Salazar — AI Systems Engineer"
+              onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(160deg,#111C2E 0%,#162035 100%)'"
+            >
+            <span class="hero-photo-corner hero-photo-corner-tl" aria-hidden="true"></span>
+            <span class="hero-photo-corner hero-photo-corner-br" aria-hidden="true"></span>
+            <span class="hero-photo-dot hero-photo-dot-1" aria-hidden="true"></span>
+            <span class="hero-photo-dot hero-photo-dot-2" aria-hidden="true"></span>
+            <span class="hero-photo-dot hero-photo-dot-3" aria-hidden="true"></span>
+            <div class="hero-photo-badge">
+              <div class="hero-photo-name">Daniel Salazar</div>
+              <div class="hero-photo-role">Principal AI Engineer · 6+ yrs</div>
             </div>
-            <div class="agent-connector"></div>
-
-            <div class="agent-node">
-              <span class="agent-node-dot dot-indigo"></span>
-              <div class="agent-node-text">
-                <div class="agent-node-title">Orchestrator Agent</div>
-                <div class="agent-node-sub">Planning + Tool Selection</div>
-              </div>
+          </div>
+          <div class="hero-photo-stats" aria-hidden="true">
+            <div class="hero-photo-stat">
+              <div class="hero-photo-stat-val">6+</div>
+              <div class="hero-photo-stat-label">Years</div>
             </div>
-            <div class="agent-connector"></div>
-
-            <div class="agent-node">
-              <span class="agent-node-dot dot-violet"></span>
-              <div class="agent-node-text">
-                <div class="agent-node-title">Reasoning Loop</div>
-                <div class="agent-node-sub">ReAct · Chain-of-Thought</div>
-              </div>
+            <div class="hero-photo-stat">
+              <div class="hero-photo-stat-val">5</div>
+              <div class="hero-photo-stat-label">Roles</div>
             </div>
-            <div class="agent-connector"></div>
-
-            <div class="agent-node">
-              <span class="agent-node-dot dot-green"></span>
-              <div class="agent-node-text">
-                <div class="agent-node-title">Evaluated Output</div>
-                <div class="agent-node-sub">Structured · Grounded</div>
-              </div>
-            </div>
-
-            <div class="agent-flow-bar">
-              <div class="agent-flow-fill"></div>
-            </div>
-
-            <div class="agent-stats">
-              <div class="agent-stat">
-                <div class="agent-stat-val">LLM</div>
-                <div class="agent-stat-label">Core</div>
-              </div>
-              <div class="agent-stat">
-                <div class="agent-stat-val">RAG</div>
-                <div class="agent-stat-label">Memory</div>
-              </div>
-              <div class="agent-stat">
-                <div class="agent-stat-val">Eval</div>
-                <div class="agent-stat-label">Quality</div>
-              </div>
+            <div class="hero-photo-stat">
+              <div class="hero-photo-stat-val">GCP</div>
+              <div class="hero-photo-stat-label">Cloud</div>
             </div>
           </div>
         </div>
@@ -367,6 +342,248 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         EXPERIENCE
+    ══════════════════════════════════════════ -->
+    <section class="section exp-section" id="experience" aria-labelledby="exp-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Experience</span>
+          <h2 class="display-md" id="exp-heading">6+ years shipping AI systems</h2>
+          <p class="subtitle body-lg">
+            From enterprise CPG to AI mental health — real production systems, real outcomes.
+          </p>
+        </div>
+
+        <div class="exp-timeline">
+
+          <!-- ── General Mills ── -->
+          <div class="exp-item reveal">
+            <div class="exp-dot current" aria-hidden="true">
+              <span class="exp-dot-inner"></span>
+            </div>
+            <div class="exp-card">
+              <div class="exp-card-top">
+                <div class="exp-card-left">
+                  <p class="exp-title">Principal AI Engineer</p>
+                  <div class="exp-company-line">
+                    <span class="exp-company">General Mills</span>
+                    <span class="exp-sep">·</span>
+                    <span class="exp-industry">CPG · Golden Valley, MN</span>
+                  </div>
+                </div>
+                <div class="exp-card-right">
+                  <span class="exp-current-badge">
+                    <span class="exp-current-dot" aria-hidden="true"></span>
+                    Current
+                  </span>
+                  <span class="exp-dates">Oct 2022 — Present</span>
+                </div>
+              </div>
+              <div class="exp-bullets">
+                <div class="exp-bullet">
+                  <span class="exp-bullet-dot" aria-hidden="true"></span>
+                  <p>Architecting and delivering <strong>AI agent systems</strong> that automate enterprise workflows across the CPG business — from ideation to production deployment.</p>
+                </div>
+                <div class="exp-bullet">
+                  <span class="exp-bullet-dot" aria-hidden="true"></span>
+                  <p>Leading cross-functional AI projects, translating ambiguous business goals into concrete system designs with measurable outcomes.</p>
+                </div>
+                <div class="exp-bullet">
+                  <span class="exp-bullet-dot" aria-hidden="true"></span>
+                  <p>Driving hands-on research and experimentation with <strong>emerging AI capabilities</strong> — evaluating new models, frameworks, and agent patterns for production viability.</p>
+                </div>
+              </div>
+              <div class="exp-tags">
+                <span class="tag">AI Agents</span>
+                <span class="tag tag-cyan">LLMs</span>
+                <span class="tag">Python</span>
+                <span class="tag tag-violet">Azure</span>
+                <span class="tag">System Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Yana ── -->
+          <div class="exp-item reveal reveal-delay-1">
+            <div class="exp-dot" aria-hidden="true">
+              <span class="exp-dot-inner"></span>
+            </div>
+            <div class="exp-card">
+              <div class="exp-card-top">
+                <div class="exp-card-left">
+                  <p class="exp-title">Senior AI Engineer</p>
+                  <div class="exp-company-line">
+                    <span class="exp-company">Yana</span>
+                    <span class="exp-sep">·</span>
+                    <span class="exp-industry">AI Mental Health App · Remote</span>
+                  </div>
+                </div>
+                <div class="exp-card-right">
+                  <span class="exp-dates">May 2022 — Oct 2025</span>
+                </div>
+              </div>
+              <div class="exp-bullets">
+                <div class="exp-bullet">
+                  <span class="exp-bullet-dot" aria-hidden="true"></span>
+                  <p>Built a <strong>GCP-based Data Lake</strong> with Terraform and Airflow ETL pipelines — improving analytics performance by <strong>70%</strong> and pipeline efficiency by <strong>90%</strong>.</p>
+                </div>
+                <div class="exp-bullet">
+                  <span class="exp-bullet-dot" aria-hidden="true"></span>
+                  <p>Designed and shipped a <strong>GenAI-powered chatbot</strong> that became the app's core feature, increasing user retention by <strong>10%</strong> and establishing a new engagement model.</p>
+                </div>
+                <div class="exp-bullet">
+                  <span class="exp-bullet-dot" aria-hidden="true"></span>
+                  <p>Architected a <strong>multi-agent LLM safety system</strong> that proactively flagged mental health crises (1% of inputs) and policy violations (0.7%), enabling real-time interventions at scale.</p>
+                </div>
+                <div class="exp-bullet">
+                  <span class="exp-bullet-dot" aria-hidden="true"></span>
+                  <p>Deployed <strong>LLM-powered services on GCP Cloud Run</strong> with Docker — accelerating release cycles and enabling the team to iterate confidently at speed.</p>
+                </div>
+              </div>
+              <div class="exp-tags">
+                <span class="tag tag-cyan">GCP</span>
+                <span class="tag">LangChain</span>
+                <span class="tag tag-violet">Multi-Agent</span>
+                <span class="tag">Airflow</span>
+                <span class="tag">Terraform</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Vertex AI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Somos Makers ── -->
+          <div class="exp-item reveal reveal-delay-2">
+            <div class="exp-dot" aria-hidden="true">
+              <span class="exp-dot-inner"></span>
+            </div>
+            <div class="exp-card">
+              <div class="exp-card-top">
+                <div class="exp-card-left">
+                  <p class="exp-title">Data Engineer</p>
+                  <div class="exp-company-line">
+                    <span class="exp-company">Somos Makers</span>
+                    <span class="exp-sep">·</span>
+                    <span class="exp-industry">Fintech · Remote</span>
+                  </div>
+                </div>
+                <div class="exp-card-right">
+                  <span class="exp-dates">May 2021 — May 2022</span>
+                </div>
+              </div>
+              <div class="exp-bullets">
+                <div class="exp-bullet">
+                  <span class="exp-bullet-dot" aria-hidden="true"></span>
+                  <p>Designed and implemented <strong>ETL pipelines</strong> with Azure Data Factory and T-SQL — cutting data processing time by <strong>60%</strong> and eliminating manual extraction bottlenecks.</p>
+                </div>
+                <div class="exp-bullet">
+                  <span class="exp-bullet-dot" aria-hidden="true"></span>
+                  <p>Built a full-stack data visualization platform (.NET Core + Flask) that improved financial decision-making speed by <strong>15%</strong>, directly used by leadership.</p>
+                </div>
+                <div class="exp-bullet">
+                  <span class="exp-bullet-dot" aria-hidden="true"></span>
+                  <p>Automated CI/CD deployments on Azure DevOps, reducing deployment time by <strong>70%</strong> and standardizing the release process for the engineering team.</p>
+                </div>
+              </div>
+              <div class="exp-tags">
+                <span class="tag tag-cyan">Azure Data Factory</span>
+                <span class="tag">T-SQL</span>
+                <span class="tag">.NET Core</span>
+                <span class="tag">Flask</span>
+                <span class="tag">Azure DevOps</span>
+                <span class="tag">CI/CD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Vectux Analytics ── -->
+          <div class="exp-item reveal reveal-delay-1">
+            <div class="exp-dot" aria-hidden="true">
+              <span class="exp-dot-inner"></span>
+            </div>
+            <div class="exp-card">
+              <div class="exp-card-top">
+                <div class="exp-card-left">
+                  <p class="exp-title">Data Engineer</p>
+                  <div class="exp-company-line">
+                    <span class="exp-company">Vectux Analytics</span>
+                    <span class="exp-sep">·</span>
+                    <span class="exp-industry">Advanced Analytics Consulting · Remote</span>
+                  </div>
+                </div>
+                <div class="exp-card-right">
+                  <span class="exp-dates">Oct 2020 — Oct 2022</span>
+                </div>
+              </div>
+              <div class="exp-bullets">
+                <div class="exp-bullet">
+                  <span class="exp-bullet-dot" aria-hidden="true"></span>
+                  <p>Delivered multi-client data efficiency projects: ETL pipelines (<strong>−30% processing time</strong>), RPA data extraction systems (<strong>+40% extraction rate</strong>), and scalable Data Lake architectures with Terraform.</p>
+                </div>
+                <div class="exp-bullet">
+                  <span class="exp-bullet-dot" aria-hidden="true"></span>
+                  <p>Led development of the company's core analytics product — Power BI-embedded dashboards with RFM segmentation that drove a <strong>70% increase in customer retention</strong> for clients.</p>
+                </div>
+                <div class="exp-bullet">
+                  <span class="exp-bullet-dot" aria-hidden="true"></span>
+                  <p>Deployed <strong>ML models for predictive analytics</strong>, making data-driven forecasting accessible to non-technical stakeholders via Flask-based interfaces.</p>
+                </div>
+              </div>
+              <div class="exp-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Terraform</span>
+                <span class="tag tag-violet">Power BI</span>
+                <span class="tag">RPA</span>
+                <span class="tag">ML Deployment</span>
+                <span class="tag">ETL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Halliburton ── -->
+          <div class="exp-item reveal reveal-delay-2">
+            <div class="exp-dot" aria-hidden="true">
+              <span class="exp-dot-inner"></span>
+            </div>
+            <div class="exp-card">
+              <div class="exp-card-top">
+                <div class="exp-card-left">
+                  <p class="exp-title">Data Engineer</p>
+                  <div class="exp-company-line">
+                    <span class="exp-company">Halliburton Latin America</span>
+                    <span class="exp-sep">·</span>
+                    <span class="exp-industry">Oil &amp; Gas · Quito, Ecuador</span>
+                  </div>
+                </div>
+                <div class="exp-card-right">
+                  <span class="exp-dates">Nov 2018 — Feb 2020</span>
+                </div>
+              </div>
+              <div class="exp-bullets">
+                <div class="exp-bullet">
+                  <span class="exp-bullet-dot" aria-hidden="true"></span>
+                  <p>Led <strong>ETL migration</strong> from Pentaho to Microsoft Power BI — modernizing the data warehouse architecture, reducing licensing costs, and improving accessibility across the organization.</p>
+                </div>
+                <div class="exp-bullet">
+                  <span class="exp-bullet-dot" aria-hidden="true"></span>
+                  <p>Executed enterprise <strong>database migration</strong> from Oracle to SQL Server, adding scraping and data parsing capabilities that extended the platform's analytical reach.</p>
+                </div>
+              </div>
+              <div class="exp-tags">
+                <span class="tag">Power BI</span>
+                <span class="tag">SQL Server</span>
+                <span class="tag">Oracle</span>
+                <span class="tag">ETL</span>
+                <span class="tag">Pentaho</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -866,11 +1083,15 @@
         <div class="contact-inner">
           <span class="section-label" style="justify-content:center;margin-bottom:var(--space-6);">Contact</span>
           <h2 class="display-md reveal" id="contact-heading">
-            Let's build something serious.
+            Let's build something that matters.
           </h2>
           <p class="body-lg reveal">
-            Open to AI engineering roles, technical collaborations, and consulting
-            on GenAI systems. Based remote, available globally.
+            Available for <strong>selected AI projects</strong>, consulting engagements, and technical
+            collaborations. Not currently seeking full-time employment — but the right
+            challenge changes that conversation.
+          </p>
+          <p class="body-md text-2 reveal" style="margin-top: -1rem; margin-bottom: 2rem;">
+            Based remote · Available globally · Focused on high-impact AI engineering work.
           </p>
 
           <div class="contact-links reveal">
@@ -916,7 +1137,7 @@
     <div class="container">
       <div class="footer-inner">
         <p class="footer-copy">
-          © <span class="footer-year"></span> Daniel Salazar · Built with care, shipped with intent.
+          © <span class="footer-year"></span> Daniel Salazar · Available for select AI projects &amp; consulting.
         </p>
         <nav class="footer-links" aria-label="Footer navigation">
           <a href="https://github.com/dsalazar-dev" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
