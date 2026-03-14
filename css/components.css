@@ -256,7 +256,7 @@
   font-family: var(--font-mono);
   font-size: 0.6875rem;
   font-weight: 500;
-  padding: 3px 10px;
+  padding: 5px 10px;
   border-radius: 100px;
   background: rgba(99, 102, 241, 0.1);
   color: var(--accent-light);
@@ -298,7 +298,7 @@
 .card:hover {
   border-color: var(--border-hover);
   box-shadow: var(--shadow-card-hover);
-  transform: translateY(-4px);
+  transform: translateY(-2px);
 }
 
 .card-elevated {
@@ -376,7 +376,7 @@
 .project-card:hover {
   border-color: var(--border-hover);
   box-shadow: var(--shadow-card-hover);
-  transform: translateY(-6px);
+  transform: translateY(-3px);
 }
 
 .project-card:hover::before {

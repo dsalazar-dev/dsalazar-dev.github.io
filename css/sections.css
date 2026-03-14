@@ -109,7 +109,7 @@
   font-family: var(--font-mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  animation: scroll-bounce 2.5s ease-in-out infinite;
+  animation: scroll-bounce 3.5s ease-in-out infinite;
   z-index: 1;
 }
 
@@ -119,8 +119,8 @@
 }
 
 @keyframes scroll-bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.5; }
-  50%       { transform: translateX(-50%) translateY(6px); opacity: 1; }
+  0%, 100% { transform: translateX(-50%) translateY(0);   opacity: 0.35; }
+  50%       { transform: translateX(-50%) translateY(4px); opacity: 0.7; }
 }
 
 /* ── Hero Photo — right side ── */
@@ -284,10 +284,12 @@
     width: clamp(200px, 55vw, 300px);
     margin-inline: auto;
   }
-  .hero-photo-dot-1,
-  .hero-photo-dot-2,
-  .hero-photo-dot-3 { display: none; }
 }
+
+/* Dots hidden everywhere — decorative noise removed */
+.hero-photo-dot-1,
+.hero-photo-dot-2,
+.hero-photo-dot-3 { display: none; }
 
 /* Legacy: keep agent-diagram styles intact for arch section reuse */
 .hero-visual {
@@ -986,7 +988,7 @@
 .exp-card:hover {
   border-color: var(--border-hover);
   box-shadow: 0 8px 32px rgba(0,0,0,0.35), 0 0 20px var(--glow);
-  transform: translateX(4px);
+  transform: translateX(2px);
 }
 
 .exp-card:hover::before {
