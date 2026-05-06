@@ -17,8 +17,8 @@
   /* Borders & glow */
   --border:       rgba(99, 102, 241, 0.18);
   --border-hover: rgba(99, 102, 241, 0.45);
-  --glow:         rgba(99, 102, 241, 0.10);
-  --glow-strong:  rgba(99, 102, 241, 0.22);
+  --glow:         rgba(99, 102, 241, 0.18);
+  --glow-strong:  rgba(99, 102, 241, 0.35);
   --glow-cyan:    rgba(34, 211, 238, 0.12);
 
   /* Accent palette */
@@ -43,6 +43,7 @@
   --space-2:  0.5rem;
   --space-3:  0.75rem;
   --space-4:  1rem;
+  --space-5:  1.25rem;
   --space-6:  1.5rem;
   --space-8:  2rem;
   --space-12: 3rem;
@@ -64,7 +65,7 @@
 
   /* Shadows */
   --shadow-card: 0 1px 3px rgba(0,0,0,0.4), 0 0 0 1px var(--border);
-  --shadow-card-hover: 0 4px 20px rgba(0,0,0,0.35), 0 0 0 1px var(--border-hover);
+  --shadow-card-hover: 0 8px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(99,102,241,0.35), 0 0 24px rgba(99,102,241,0.15);
   --shadow-glow: 0 0 40px var(--glow-strong);
 
   /* Layout */
@@ -180,10 +181,21 @@ button {
 
 /* ── Gradient text ── */
 .gradient-text {
-  background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent-cyan) 100%);
+  background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent-cyan) 50%, var(--accent-violet) 100%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: gradient-shift 6s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% center; }
+  50%       { background-position: 100% center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-text { animation: none; background-size: auto; }
 }
 
 /* ── Layout utilities ── */
@@ -279,8 +291,37 @@ button {
 .reveal-delay-3 { transition-delay: 240ms; }
 .reveal-delay-4 { transition-delay: 320ms; }
 
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95) translateY(16px);
+  transition: opacity var(--duration-slow) var(--ease),
+              transform var(--duration-slow) var(--ease);
+}
+.reveal-scale.visible { opacity: 1; transform: scale(1) translateY(0); }
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity var(--duration-slow) var(--ease),
+              transform var(--duration-slow) var(--ease);
+}
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity var(--duration-slow) var(--ease),
+              transform var(--duration-slow) var(--ease);
+}
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .reveal-scale, .reveal-left, .reveal-right {
     opacity: 1;
     transform: none;
     transition: none;
@@ -319,3 +360,29 @@ button {
   background: rgba(99, 102, 241, 0.3);
   color: var(--text-1);
 }
+
+/* ── Mouse spotlight ── */
+body {
+  --mx: 50vw;
+  --my: 50vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(
+    600px circle at var(--mx) var(--my),
+    rgba(99, 102, 241, 0.06) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.spotlight-active::before { opacity: 1; }
+
+@media (hover: none), (pointer: coarse) { body::before { display: none; } }
+@media (prefers-reduced-motion: reduce) { body::before { display: none; } }
