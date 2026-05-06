@@ -2,46 +2,52 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Overview
+## Project Overview
 
-Static GitHub personal portfolio page for Daniel Salazar (@dsalazar-dev), hosted at `dsalazar-dev.github.io`. No build step, no package manager, no framework — two files served directly.
+Static portfolio site for Daniel Salazar, AI Systems Engineer. No build step — pure HTML/CSS/JS. Deployed to GitHub Pages from `master` branch at `https://dsalazar-dev.github.io`.
 
-## Files
-
-- `index.html` — Main page. Sidebar profile (`<aside>`) + main content (`<main>`): Work, Skills, and Blog sections. Project cards are hardcoded `<article>` elements, not dynamically fetched.
-- `index.css` — All styles. CSS Grid two-column layout, CSS custom properties for theming, three breakpoints (1100px, 800px, 480px).
+To preview locally, open `index.html` directly in a browser. No dev server or package manager required.
 
 ## Architecture
 
-**Layout**: CSS Grid on `body` — `300px` sidebar + `1fr` main column. The `<aside id="profile">` is `position: sticky; height: 100vh` so it stays fixed while the right column scrolls. At ≤800px it collapses to a single stacked column.
+Single-page site. All content is in `index.html`. The CSS and JS are split across purpose-specific files:
 
-**CSS custom properties** (defined in `:root`):
-- `--accent: #00D4FF` — cyan used for all interactive states, icons, and brand moments
-- `--card-bg`, `--border-color`, `--muted-color` — dark-theme card and text palette
-- `--accent-subtle`, `--accent-border` — low-opacity accent for backgrounds and borders
+- `css/design-system.css` — CSS custom properties (tokens), reset, and typography. **All colors, spacing, radii, shadows, and transitions are defined here as CSS variables.** Always use these tokens rather than hardcoded values.
+- `css/components.css` — Nav, cards, buttons, tags, badges.
+- `css/sections.css` — Per-section layout and visual treatments.
+- `js/main.js` — Nav scroll behavior, mobile menu toggle, smooth scroll, active nav link tracking via `IntersectionObserver`.
+- `js/animations.js` — Canvas particle network (hero background, ~52 nodes) and scroll-reveal via `IntersectionObserver`. Both respect `prefers-reduced-motion`.
 
-**External dependencies (CDN only):**
-- Font Awesome 5.7.1 — icons (has SRI `integrity` attribute)
-- Google Fonts (Poppins, Questrial) — loaded via `<link>` with `preconnect` + `display=swap`
+`config.json` is legacy and unused by the current site.
 
-No jQuery, no magic-grid, no animate.css — all removed. Blog posts load via native `fetch('blog.json')` inside a `DOMContentLoaded` listener using DOM API construction (no innerHTML with user data).
+## Design System
 
-**Blog section** (`#blog_section`): hidden if `blog.json` is missing or empty. Blog post pages are expected at `./blog/<url_title>/`.
+Colors, spacing, radius, shadow, and easing are all CSS variables in `css/design-system.css`. Key accent palette:
 
-**Sidebar background**: CSS `radial-gradient` — no external image dependency.
+- `--accent` `#6366F1` — primary indigo
+- `--accent-cyan` `#22D3EE` — secondary cyan
+- `--accent-violet` `#A78BFA` — tertiary purple
 
-## Development
+Tag classes: `.tag` (default), `.tag-cyan`, `.tag-violet`.
 
-Open `index.html` directly in a browser for the main page. A local HTTP server is needed only to test the blog JSON fetch:
+Typography: Inter for body/UI, JetBrains Mono for tags/code. Sizes use `clamp()` — no manual breakpoints.
 
-```powershell
-python -m http.server 8080
-```
+## Content Updates
 
-**To add/update projects**: edit `<article>` cards inside `#work_section` in `index.html`.
+All content is in `index.html`. Section anchors: `#about`, `#experience`, `#work`, `#systems`, `#contact`.
 
-**To update profile info**: edit the `<aside id="profile">` block in `index.html`.
+- **Featured projects** — find `<!-- FEATURED PROJECTS -->`, copy an `<article class="project-card">` block.
+- **Archive entries** — find `<!-- MORE EXPERIMENTS -->`, add an `<article class="mini-card">` block.
+- **Contact links** — search for `mailto:` and `linkedin.com/in/`.
 
-**To change the accent color or theme**: edit `--accent` and related custom properties in the `:root` block at the top of `index.css`.
+## Accessibility Requirements
 
-**Resume**: the sidebar links to `/resume.pdf` — drop a `resume.pdf` file in the repo root to activate it.
+- All interactive icon-only elements need `aria-label`.
+- Decorative SVGs and canvas elements need `aria-hidden="true"`.
+- New animations must respect `prefers-reduced-motion: reduce`.
+- Maintain semantic HTML5 structure (`<section>`, `<article>`, `<header>`, etc.).
+- WCAG AA color contrast must be maintained for all text.
+
+## Deployment
+
+Merge to `master`. GitHub Pages auto-deploys from the root of `master`. No build step needed.
